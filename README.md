@@ -25,18 +25,5 @@ Optionally, you can upload another image and make another prediction.
 
 Project Structure:
 
-weather-classifier/
-│
-├── app.py               # Flask application code
-├── static/              # Static files (e.g., images)
-│   └── uploads/         # Directory for uploaded images
-├── templates/           # HTML templates
-│   ├── index.html       # Main page with upload form
-│   └── result.html      # Result page with prediction
-├── uploads/             # Images 
-│   └── images(n)        
-├── fmodel.h5            # Trained CNN model
-├── classes.npy          # Encoded class labels
-├── requirements.txt     # List of Python dependencies
-└── README.md            # Project documentation
+![image](https://github.com/qmjae/CPE019_HOA10/assets/142195148/5e19f64c-218c-4bff-8ff8-0b56a82f8ea7)
 
