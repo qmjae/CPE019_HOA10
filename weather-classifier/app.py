@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from keras.models import load_model
 from keras.preprocessing import image
 import numpy as np
+import os
 
 app = Flask(__name__)
 
@@ -10,6 +11,10 @@ model = load_model('fmodel.h5')
 
 # Load the classes
 classes = np.load('classes.npy')
+
+# Define the upload folder
+UPLOAD_FOLDER = 'static/uploads'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/')
 def home():
@@ -21,8 +26,8 @@ def predict():
         # Get the file from the POST request
         f = request.files['file']
 
-        # Save the file to ./uploads
-        file_path = "./uploads/" + f.filename
+        # Save the file to ./static/uploads
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], f.filename)
         f.save(file_path)
 
         # Make prediction
