@@ -1,6 +1,6 @@
 # CNN Weather Classifier
 
-This is a web application built with Flask that allows users to upload images of weather conditions and predicts the weather class using a trained convolutional neural network model.
+This is a web application built with Flask that allows users to upload images of weather conditions and predicts the weather class using a trained convolutional neural network model. This model has an a valid accuracy of 91.11
 
 ## Getting Started
 
